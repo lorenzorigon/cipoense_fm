@@ -20,3 +20,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+//Rotas para Category e Posts
+Route::resource('category', \App\Http\Controllers\CategoryController::class);
+Route::resource('post', \App\Http\Controllers\PostController::class);
+
