@@ -23,6 +23,10 @@ class User extends Authenticatable
         'password',
     ];
 
+    public function categories(){
+        return $this->hasMany('App\Models\Category');
+    }
+
     /**
      * The attributes that should be hidden for serialization.
      *
